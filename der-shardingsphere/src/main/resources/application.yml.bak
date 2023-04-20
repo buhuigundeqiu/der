@@ -1,0 +1,13 @@
+server:
+  port: 8855
+
+spring:
+  shardingsphere:
+    datasource:
+      names: m1
+      m1:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/der?serverTimezone=GMT%2B8
+        username: root
+        password: 123456
