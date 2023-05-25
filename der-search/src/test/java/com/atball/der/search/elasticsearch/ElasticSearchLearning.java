@@ -1,7 +1,9 @@
 package com.atball.der.search.elasticsearch;
 
+import org.springframework.data.mongodb.core.mapping.Field;
+
 /**
- * es 学习
+ *  学习
  * 查看索引信息：/_cat/indices
  *                                                                              数据存储索引
  *           日志采集                                     数据传输汇聚            ElasticSearch集群                 异常定位与监控
@@ -21,7 +23,11 @@ package com.atball.der.search.elasticsearch;
  *          ************                                                        ************
  *
  */
+
 public class ElasticSearchLearning {
+
+    @Field
+    private String Id;
 
     /**
      *
@@ -131,6 +137,9 @@ public class ElasticSearchLearning {
      *
      *
      *
+     *  https://zhuanlan.zhihu.com/p/559632776（万字长文：一文彻底搞懂Elasticsearch中Geo数据类型查询、聚合、排序）
+     *
+     *  https://blog.csdn.net/tianyaleixiaowu/article/details/76149547/
      *
      *
      *
@@ -139,8 +148,9 @@ public class ElasticSearchLearning {
      *
      *
      *
+     *  每一个搜索请求都需要命中索引中的每一个分片，如果每一个分片都处于不同的节点还好，但如果多个分片都需要在同一个节点上竞争使用相同的资源就有些糟糕了
      *
-     *
+     *  用于计算相关度的词项统计信息是基于分片的。如果有许多分片，每一个都只有很少的数据会导致很低的相关度。
      *
      *
      *
