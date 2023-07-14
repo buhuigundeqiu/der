@@ -2,6 +2,11 @@ package com.atball.der.search.spring;
 
 public class SpringUsing {
 
+    //获取对象大小的方法
+    /**
+     * jdk.nashorn.internal.ir.debug.ObjectSizeCalculator.getObjectSize(Object obj;)
+     */
+
     /**
      * BeanFactory registerSingleton
      * 通过工厂后置处理器注册Bean
@@ -30,8 +35,6 @@ public class SpringUsing {
 //                   user1.setAge(27);
 //                   configurableListableBeanFactory.registerSingleton("user", user1);
 //          }
-
-
 
 
 }

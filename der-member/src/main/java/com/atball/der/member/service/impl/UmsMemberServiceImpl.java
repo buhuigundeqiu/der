@@ -29,11 +29,17 @@ public class UmsMemberServiceImpl implements UmsMemberService {
 
     @Override
     public CommonResult register(String username, String password, String telephone, String authCode) {
+        // 从redis中获取验证码与authCode比较
+        // 数据库member表中插入一条记录
+
         return null;
     }
 
     @Override
     public CommonResult generateAuthCode(String telephone) {
+        // 查询当前用户有没有注册
+        // 校验60s内有没有发送过验证码
+        // 生成随机校验码
         return null;
     }
 
